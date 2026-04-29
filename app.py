@@ -14,9 +14,9 @@ from difflib import get_close_matches
 app = Flask(__name__)
 
 # ── Twilio Config ──
-ACCOUNT_SID = 'AC74d01f126735435dc924aa317e3584f4'
-AUTH_TOKEN  = '296e4a4313312e2567205f70acb0396e'
-TWILIO_NUM  = '+17622473995'
+ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
+AUTH_TOKEN  = os.environ.get('TWILIO_AUTH_TOKEN')
+TWILIO_NUM  = os.environ.get('TWILIO_PHONE_NUMBER')
 twilio_client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 # ── OTP Store ──
