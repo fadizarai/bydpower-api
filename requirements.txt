@@ -1,7 +1,6 @@
 flask
 gunicorn
 twilio
-inference-sdk
 opencv-python-headless
-numpy
 pytesseract
+inference-sdk==0.9.23

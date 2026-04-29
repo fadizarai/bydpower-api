@@ -2,8 +2,6 @@ services:
   - type: web
     name: bydpower-api
     runtime: python
-    buildCommand: bash build.sh
-    startCommand: gunicorn app:app --timeout 120
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
+    pythonVersion: "3.11.9"
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
