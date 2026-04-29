@@ -1,0 +1,7 @@
+flask
+gunicorn
+twilio
+inference-sdk
+opencv-python-headless
+numpy
+pytesseract
